@@ -15,8 +15,7 @@ module.exports = function toReadable (number) {
             } else if (x[1] === "0") {
                 return (digits[x[0]] + " hundred " + digits[x[2]]);
             } else if (x[1] === "1") {
-                let buffer = x[1] + x[2]
-                return (digits[x[0]] + " hundred " + fromTenToNineteen[buffer]);
+                return (digits[x[0]] + " hundred " + fromTenToNineteen[x[1] + x[2]]);
             } else {
                 return (digits[x[0]] + " hundred " + twoDigits[x[1]] + " " + digits[x[2]]);
             }
